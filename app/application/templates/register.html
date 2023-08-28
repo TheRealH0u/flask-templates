@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-4 col-md-6 col-sm-6">
+      <div class="card shadow">
+        <div class="card-title text-center border-bottom">
+          <h2 class="p-3">Register</h2>
+        </div>
+        <div class="card-body">
+          <form method="POST" action="{{ url_for('web.register') }}">
+            {{ form.csrf_token }}
+            <div class="mb-4">
+              {{ form.username.label(class_='form-label') }}
+              {{ form.username(class_='form-control') }}
+            </div>
+            <div class="mb-4">
+              {{ form.email.label(class_='form-label') }}
+              {{ form.email(class_='form-control') }}
+            </div>
+            <div class="mb-4">
+              {{ form.password.label(class_='form-label') }}
+              {{ form.password(class_='form-control') }}
+            </div>
+            <div class="mb-4">
+              {{ form.verify.label(class_='form-label') }}
+              {{ form.verify(class_='form-control') }}
+            </div>
+            <div class="d-grid">
+              {{ form.submit(class_='btn btn-primary') }}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+
+{% endblock %}

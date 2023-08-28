@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% include "navbar.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="card shadow">
+        <div class="card-body">
+
+          <h4>Flag:</h4>
+          <p class="lead">
+            {{ flag }}
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

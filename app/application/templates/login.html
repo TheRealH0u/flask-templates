@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-4 col-md-6 col-sm-6">
+      <div class="card shadow">
+        <div class="card-title text-center border-bottom">
+          <h2 class="p-3">Login</h2>
+        </div>
+        <div class="card-body">
+          <form method="POST" action="{{ url_for('web.login') }}">
+            {{ form.csrf_token }}
+            <div class="mb-4">
+              {{ form.username.label(class_='form-label') }}
+              {{ form.username(class_='form-control') }}
+            </div>
+            <div class="mb-4">
+              {{ form.password.label(class_='form-label') }}
+              {{ form.password(class_='form-control') }}
+            </div>
+            <div class="d-grid">
+              {{ form.submit(class_='btn btn-primary') }}
+            </div>
+            {% if error %}
+            <br>
+            <p style="color:red">Invalid Credentials</p>
+            {% endif %}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
