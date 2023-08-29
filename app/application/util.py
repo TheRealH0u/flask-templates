@@ -56,3 +56,11 @@ def isAdmin(f):
         else:
             return abort(401, 'Unauthorised access detected!')
     return decorator
+
+def isAdminBool():
+    #Checks if user is admin using JWT token and return a bool value of False or True
+    token = verifyJWT(request.cookies.get('token'))
+    if token and token['username'] == 'admin':
+        return True
+    else:
+        return False
