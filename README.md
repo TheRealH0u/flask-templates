@@ -13,3 +13,8 @@ Primarly it is used for CTF development but it can be used for anything else
 - [ ] Insecure JWT
 - [ ] ERROR page that can return to much data or just a normal error
 - [ ] admin bypass
+- [ ] Add username is saved in cookie, no encryption
+- [ ] Add password is saved in unsafe hash (md5)
+- [ ] Add user settings
+- [ ] Add graphql
+- [ ] API
