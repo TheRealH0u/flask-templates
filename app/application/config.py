@@ -8,7 +8,6 @@ class Config(object):
     SESSION_COOKIE_HTTPONLY = True
     REMEMBER_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = 'Strict'
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.normpath(f'{basedir}/../database.db')
 
 class ProductionConfig(Config):
     pass
